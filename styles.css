@@ -1,0 +1,318 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Navbar */
+.header {
+    position: relative;
+    background: #f7f7f7;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-btn a {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.contact-btn a:hover {
+    background: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.hero-btn:hover {
+    background: #0056b3;
+}
+
+/* Services Section */
+.services {
+    padding: 2rem;
+    background: #f7f7f7;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    flex: 1 1 calc(25% - 1rem);
+    background: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+}
+/* Testimonials Section */
+.testimonials {
+    padding: 2rem;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.testimonial-card {
+    flex: 1 1 calc(30% - 1rem);
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.client-rating {
+    font-size: 1.2rem;
+    color: #f5c518;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex: 1 1 100%;
+    }
+}
+/* Global Adjustments for Mobile */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    .contact-btn a {
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem 0;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Services Section */
+    .service-cards {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    /* Testimonials Section */
+    .testimonial-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .testimonial-card {
+        flex: 1 1 100%;
+    }
+
+    /* Footer */
+    .footer ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer ul li a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Further Adjustments for Smaller Screens */
+@media (max-width: 480px) {
+    /* Navbar */
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Service Cards */
+    .service-cards {
+        gap: 1rem;
+    }
+
+    .card i {
+        font-size: 1.5rem;
+    }
+
+    /* Testimonial Cards */
+    .testimonial-card p {
+        font-size: 0.9rem;
+    }
+
+    .client-rating {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+/* Video Section */
+.video-section {
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000; /* Black background for contrast */
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border: none;
+}
+

@@ -1,123 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComexFarm - Homepage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #f8f9fa;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-        header img {
-            height: 50px;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            background: url('hero-image-placeholder.jpg') no-repeat center center / cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 1.2rem;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
-        .features {
-            display: flex;
-            justify-content: space-around;
-            padding: 40px 20px;
-        }
-        .feature {
-            text-align: center;
-            max-width: 300px;
-        }
-        .feature img {
-            height: 100px;
-            margin-bottom: 15px;
-        }
-        footer {
-            background-color: #f8f9fa;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid #ddd;
-        }
-    </style>
+    <title>Comex Farm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <header>
-        <img src="logo-placeholder.png" alt="ComexFarm Logo">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Comex Farm</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="contact-btn">
+                <a href="contact.html">Get A Free Quote</a>
+            </div>
         </nav>
+        <!--<section class="hero">-->
+        <!--    <div class="hero-content">-->
+        <!--        <h1>Experience the Best of Vietnam's Agriculture</h1>-->
+        <!--        <p>Fresh Fruits, Aromatic Spices, and Premium Rice – Delivered with Excellence and Passion.</p>-->
+        <!--        <a href="about.html" class="hero-btn">Learn More</a>-->
+        <!--    </div>-->
+        <!--</section>-->
     </header>
-    <section class="hero">
-        <div>
-            <h1>Welcome to ComexFarm</h1>
-            <p>Your trusted partner in modern agriculture solutions.</p>
-            <a class="cta-button" href="#">Get Started</a>
-        </div>
-    </section>
-    <section class="features">
-        <div class="feature">
-            <img src="feature-icon-1.png" alt="Feature 1">
-            <h3>Feature One</h3>
-            <p>Discover innovative farming techniques tailored for success.</p>
-        </div>
-        <div class="feature">
-            <img src="feature-icon-2.png" alt="Feature 2">
-            <h3>Feature Two</h3>
-            <p>Access real-time data and insights to boost productivity.</p>
-        </div>
-        <div class="feature">
-            <img src="feature-icon-3.png" alt="Feature 3">
-            <h3>Feature Three</h3>
-            <p>Connect with a network of experts and resources.</p>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2024 ComexFarm. All rights reserved.</p>
+
+    <main>
+        <section class="video-section">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/74YCSMByYRg?si=TbxAmlh5kOukB7Bi&autoplay=1&mute=1&controls=0"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Fresh Fruit</h3>
+                    <p>We bring you the freshest products from Vietnam, sourced directly from local farmers.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Dried Fruit</h3>
+                    <p>Delicious and nutritious dried fruits, hand-selected and dried to perfection.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Spices</h3>
+                    <p>Organic spices that add flavor to your meals while supporting sustainable farming.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-rice"></i>
+                    <h3>Rice</h3>
+                    <p>High-quality rice and rice-based products that cater to all tastes and diets.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <p>"Comex Farm's dragon fruit is simply the best we've ever tasted. Their commitment to organic and
+                        sustainable farming practices shines through."</p>
+                    <div class="client-rating">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Their attention to detail ensures that our orders are always perfect and delivered on time.
+                        Highly recommend Comex Farm!"</p>
+                    <div class="client-rating">★★★★★</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Comex Farm made the importing process easy and stress-free. Their products have exceeded my
+                        expectations."</p>
+                    <div class="client-rating">★★★★★</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Comex Farm CO., LTD</p>
+        <ul>
+            <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
     </footer>
 </body>
-</html>
 
+</html>
