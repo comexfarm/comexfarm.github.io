@@ -1,105 +1,726 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comex Farm</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<style id="jetpack-boost-critical-css">@media all{@charset "UTF-8";ul{box-sizing:border-box}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text{position:absolute;top:-10000em;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}:root{--page-title-display:block}h1.entry-title{display:var(--page-title-display)}.elementor-kit-8{--e-global-color-primary:#141414;--e-global-color-3d761f9:#FFFFFF;--e-global-typography-f881bf5-font-family:"Overpass";--e-global-typography-f881bf5-font-size:14px;--e-global-typography-f881bf5-font-weight:normal;--e-global-typography-f881bf5-text-transform:capitalize;--e-global-typography-f881bf5-font-style:normal;--e-global-typography-f881bf5-text-decoration:none;--e-global-typography-f881bf5-line-height:1em;--e-global-typography-f881bf5-letter-spacing:0.5px;--e-global-typography-8df9f7c-font-family:"Poppins";--e-global-typography-8df9f7c-font-size:10px;--e-global-typography-8df9f7c-font-weight:300;--e-global-typography-8df9f7c-text-transform:capitalize;--e-global-typography-8df9f7c-font-style:normal;--e-global-typography-8df9f7c-text-decoration:none;--e-global-typography-8df9f7c-line-height:1em;--e-global-typography-8df9f7c-letter-spacing:0px;background-color:var(--e-global-color-3d761f9)}h1.entry-title{display:var(--page-title-display)}.site-header .header-inner{width:1024px;max-width:100%}.site-header{padding-inline-end:0%;padding-inline-start:0%}.site-header .site-branding .site-logo img{width:40px;max-width:40px}.site-header .site-navigation ul.menu li a{color:var(--e-global-color-primary)}.site-header .site-navigation-toggle i{color:var(--e-global-color-primary)}.site-header .site-navigation .menu li{font-family:var(--e-global-typography-f881bf5-font-family),Sans-serif;font-size:var(--e-global-typography-f881bf5-font-size);font-weight:var(--e-global-typography-f881bf5-font-weight);text-transform:var(--e-global-typography-f881bf5-text-transform);font-style:var(--e-global-typography-f881bf5-font-style);text-decoration:var(--e-global-typography-f881bf5-text-decoration);line-height:var(--e-global-typography-f881bf5-line-height);letter-spacing:var(--e-global-typography-f881bf5-letter-spacing);word-spacing:var(--e-global-typography-f881bf5-word-spacing)}.site-footer .footer-inner{width:1575px;max-width:100%}.site-footer .copyright p{color:var(--e-global-color-primary);font-family:var(--e-global-typography-8df9f7c-font-family),Sans-serif;font-size:var(--e-global-typography-8df9f7c-font-size);font-weight:var(--e-global-typography-8df9f7c-font-weight);text-transform:var(--e-global-typography-8df9f7c-text-transform);font-style:var(--e-global-typography-8df9f7c-font-style);text-decoration:var(--e-global-typography-8df9f7c-text-decoration);line-height:var(--e-global-typography-8df9f7c-line-height);letter-spacing:var(--e-global-typography-8df9f7c-letter-spacing);word-spacing:var(--e-global-typography-8df9f7c-word-spacing)}@media (max-width:1024px){.site-header .site-navigation .menu li{font-size:var(--e-global-typography-f881bf5-font-size);line-height:var(--e-global-typography-f881bf5-line-height);letter-spacing:var(--e-global-typography-f881bf5-letter-spacing);word-spacing:var(--e-global-typography-f881bf5-word-spacing)}.site-footer .copyright p{font-size:var(--e-global-typography-8df9f7c-font-size);line-height:var(--e-global-typography-8df9f7c-line-height);letter-spacing:var(--e-global-typography-8df9f7c-letter-spacing);word-spacing:var(--e-global-typography-8df9f7c-word-spacing)}}@media (max-width:767px){.site-header .site-navigation .menu li{font-size:var(--e-global-typography-f881bf5-font-size);line-height:var(--e-global-typography-f881bf5-line-height);letter-spacing:var(--e-global-typography-f881bf5-letter-spacing);word-spacing:var(--e-global-typography-f881bf5-word-spacing)}.site-footer .copyright p{font-size:var(--e-global-typography-8df9f7c-font-size);line-height:var(--e-global-typography-8df9f7c-line-height);letter-spacing:var(--e-global-typography-8df9f7c-letter-spacing);word-spacing:var(--e-global-typography-8df9f7c-word-spacing)}}html{line-height:1.15;-webkit-text-size-adjust:100%}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-size:1rem;font-weight:400;line-height:1.5;color:#333;background-color:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}h1{-webkit-margin-before:.5rem;margin-block-start:.5rem;-webkit-margin-after:1rem;margin-block-end:1rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}h1{font-size:2.5rem}p{-webkit-margin-before:0;margin-block-start:0;-webkit-margin-after:.9rem;margin-block-end:.9rem}a{background-color:transparent;text-decoration:none;color:#c36}img{border-style:none;height:auto;max-width:100%}li,ul{-webkit-margin-before:0;margin-block-start:0;-webkit-margin-after:0;margin-block-end:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}.hide{display:none!important}.screen-reader-text{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute!important;width:1px;word-wrap:normal!important}.site-header{display:flex;flex-wrap:wrap;justify-content:space-between;-webkit-padding-before:1rem;padding-block-start:1rem;-webkit-padding-after:1rem;padding-block-end:1rem;position:relative}.site-header .site-navigation{justify-content:flex-end}.site-header .site-branding{display:flex;flex-direction:column;justify-content:center}.site-header .header-inner{display:flex;flex-wrap:wrap;justify-content:space-between}.site-header .header-inner .custom-logo-link{display:block}.site-header:not(.header-stacked) .header-inner .site-branding{max-width:30%}.site-header:not(.header-stacked) .header-inner .site-navigation{max-width:70%}@media (max-width:576px){.site-header .header-inner:not(.header-stacked) .site-branding{max-width:80%}}.site-footer{-webkit-padding-before:1rem;padding-block-start:1rem;-webkit-padding-after:1rem;padding-block-end:1rem;position:relative}.site-footer .footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between}.site-footer .footer-inner .custom-logo-link{display:block}.site-footer .footer-inner .site-navigation{justify-content:flex-end}.site-footer .footer-inner .site-branding{display:flex;flex-direction:column;justify-content:center}.site-footer .footer-inner .site-branding .site-description{margin:0}.site-footer .footer-inner .copyright{align-items:center;display:flex;justify-content:flex-end}.site-footer .footer-inner .copyright p{margin:0}.site-footer.footer-has-copyright .footer-inner .site-navigation{justify-content:center}.site-footer.footer-stacked .footer-inner{align-items:center;flex-direction:column;text-align:center}.site-footer.footer-stacked .footer-inner .site-navigation .menu{padding:0}@media (max-width:576px){.site-footer .footer-inner .site-navigation ul.menu{justify-content:center}.site-footer .footer-inner .site-navigation ul.menu li{display:inline-block}}.site-navigation-toggle-holder{display:flex;align-items:center;justify-content:flex-end;flex-grow:1;max-width:20%;padding:8px 15px}.site-navigation-toggle-holder .site-navigation-toggle{display:flex;align-items:center;justify-content:center;font-size:22px;padding:.25em;border:0 solid;border-radius:3px;background-color:rgba(0,0,0,.05);color:#494c4f}.site-navigation{grid-area:nav-menu;display:flex;align-items:center;flex-grow:1}.site-navigation ul.menu{list-style-type:none;padding:0}.site-navigation ul.menu{display:flex;flex-wrap:wrap}.site-navigation ul.menu li{position:relative;display:flex}.site-navigation ul.menu li a{display:block;padding:8px 15px}footer .site-navigation ul.menu a{padding:5px 15px}.site-navigation-dropdown{-webkit-margin-before:10px;margin-block-start:10px;transform-origin:top;position:absolute;bottom:0;left:0;z-index:10000;width:100%}.site-navigation-toggle-holder:not(.elementor-active)+.site-navigation-dropdown{transform:scaleY(0);max-height:0}.site-navigation-dropdown ul{padding:0}.site-navigation-dropdown ul.menu{position:absolute;width:100%;padding:0;margin:0;background:#fff}.site-navigation-dropdown ul.menu li{display:block;width:100%;position:relative}.site-navigation-dropdown ul.menu li a{display:block;padding:20px;background:#fff;color:#55595c;box-shadow:inset 0-1px 0 rgba(0,0,0,.1019607843)}@media (min-width:992px){.site-header.menu-dropdown-tablet:not(.menu-layout-dropdown) .site-navigation-toggle-holder{display:none!important}}@media (max-width:992px){.site-header.menu-dropdown-tablet:not(.menu-layout-dropdown) .site-navigation{display:none!important}}.page-header .entry-title,.site-footer .footer-inner,.site-header .header-inner,body:not([class*=elementor-page-]) .site-main{-webkit-margin-start:auto;margin-inline-start:auto;-webkit-margin-end:auto;margin-inline-end:auto;width:100%}@media (max-width:575px){.page-header .entry-title,.site-footer .footer-inner,.site-header .header-inner,body:not([class*=elementor-page-]) .site-main{-webkit-padding-start:10px;padding-inline-start:10px;-webkit-padding-end:10px;padding-inline-end:10px}}@media (min-width:576px){.page-header .entry-title,.site-footer .footer-inner,.site-header .header-inner,body:not([class*=elementor-page-]) .site-main{max-width:500px}}@media (min-width:768px){.page-header .entry-title,.site-footer .footer-inner,.site-header .header-inner,body:not([class*=elementor-page-]) .site-main{max-width:600px}}@media (min-width:992px){.page-header .entry-title,.site-footer .footer-inner,.site-header .header-inner,body:not([class*=elementor-page-]) .site-main{max-width:800px}}@media (min-width:1200px){.page-header .entry-title,.site-footer .footer-inner,.site-header .header-inner,body:not([class*=elementor-page-]) .site-main{max-width:1140px}}.screen-reader-text{clip:rect(1px,1px,1px,1px);word-wrap:normal!important;border:0;-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px}}</style><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1, noarchive' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Home - Comex Farm Vietnam Dragon Fruit Rice &amp; Rice-based Products</title>
+	<meta name="description" content="Comex Farm: Elevating Agricultural Exports from Vietnam for Over a Decade. Discover Our Exquisite Range of Premium Agricultural Products includes Dragon Fruit, Rice &amp; Rice-based Products, Coconut, Longan, Fresh Fruits, Dried Fruits, and Spices, Crafted with Care from Vietnam&#039;s Lush Fields. Embrace Quality, Reliability, and Sustainability with Comex Farm&#039;s Natural Bounty. 🌿🌾🍅" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Home - Comex Farm Vietnam Dragon Fruit Rice &amp; Rice-based Products" />
+	<meta property="og:description" content="Comex Farm: Elevating Agricultural Exports from Vietnam for Over a Decade. Discover Our Exquisite Range of Premium Agricultural Products includes Dragon Fruit, Rice &amp; Rice-based Products, Coconut, Longan, Fresh Fruits, Dried Fruits, and Spices, Crafted with Care from Vietnam&#039;s Lush Fields. Embrace Quality, Reliability, and Sustainability with Comex Farm&#039;s Natural Bounty. 🌿🌾🍅" />
+	<meta property="og:url" content="https://comexfarm.com/" />
+	<meta property="og:site_name" content="Comex Farm" />
+	<meta property="article:publisher" content="https://www.facebook.com/comexfarm" />
+	<meta property="article:modified_time" content="2024-08-11T03:46:49+00:00" />
+	<meta property="og:image" content="https://comexfarm.com/wp-content/uploads/2023/09/cropped-header_logo-1-scaled-1.jpg" />
+	<meta property="og:image:width" content="2053" />
+	<meta property="og:image:height" content="1286" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+
+	<meta name="google-site-verification" content="P_Rdn8VxOU4H8-kdR20bTFgG7oXwtX6K9yRk6Cy-zjk" />
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='https://stats.wp.com/' />
+<link rel='dns-prefetch' href='https://i0.wp.com/' />
+<noscript><link rel='stylesheet' id='all-css-b4d3c9712aeabbb3cadd902efe64c742' href='_jb_static/index.html%3F%3F-eJyVU11zgyAQ%252FDd9KqGJ6TQvmf6UDsLFkBzCcKhjf30P81E70Ux9EU9295ZbkV0QttbYGCCpiaSxlGSJXp8F2jKq2EtKPcLK2XrFgFfJDO3rBHWSAZvK1iRPkILS59v61UJtfJSqSd6plKy+7YjWGvAhAncqG4vm2gqMTUwYCpIDiJ%252FQ3TvePZ5IOkYrQHDZwrgIqHqIAqFSuv9jeJbOe+N6mpT.css' type='text/css' media='all' /></noscript><link rel='stylesheet' id='all-css-b4d3c9712aeabbb3cadd902efe64c742' href='_jb_static/index.html%3F%3F-eJyVU11zgyAQ%252FDd9KqGJ6TQvmf6UDsLFkBzCcKhjf30P81E70Ux9EU9295ZbkV0QttbYGCCpiaSxlGSJXp8F2jKq2EtKPcLK2XrFgFfJDO3rBHWSAZvK1iRPkILS59v61UJtfJSqSd6plKy+7YjWGvAhAncqG4vm2gqMTUwYCpIDiJ%252FQ3TvePZ5IOkYrQHDZwrgIqHqIAqFSuv9jeJbOe+N6mpT.css' type='text/css' media="not all" data-media="all" onload="this.media=this.dataset.media; delete this.dataset.media; this.removeAttribute( 'onload' );" />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('index.html');--wp--preset--duotone--grayscale: url('index.html');--wp--preset--duotone--purple-yellow: url('index.html');--wp--preset--duotone--blue-red: url('index.html');--wp--preset--duotone--midnight: url('index.html');--wp--preset--duotone--magenta-yellow: url('index.html');--wp--preset--duotone--purple-green: url('index.html');--wp--preset--duotone--blue-orange: url('index.html');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<noscript><link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COverpass%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.1.3' media='all' />
+</noscript><link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COverpass%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.1.3' media="not all" data-media="all" onload="this.media=this.dataset.media; delete this.dataset.media; this.removeAttribute( 'onload' );" />
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+
+	<style>img#wpstats{display:none}</style>
+		<meta name="generator" content="Elementor 3.15.3; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+
+		<link rel="icon" href="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=270%2C270&#038;ssl=1" />
 </head>
+<body class="home page-template-default page page-id-53 wp-custom-logo ehf-template-hello-elementor ehf-stylesheet-hello-elementor e-lazyload elementor-default elementor-kit-8 elementor-page elementor-page-53">
 
-<body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">Comex Farm</div>
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="contact-btn">
-                <a href="contact.html">Get A Free Quote</a>
-            </div>
-        </nav>
-        <!--<section class="hero">-->
-        <!--    <div class="hero-content">-->
-        <!--        <h1>Experience the Best of Vietnam's Agriculture</h1>-->
-        <!--        <p>Fresh Fruits, Aromatic Spices, and Premium Rice – Delivered with Excellence and Passion.</p>-->
-        <!--        <a href="about.html" class="hero-btn">Learn More</a>-->
-        <!--    </div>-->
-        <!--</section>-->
-    </header>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+<a class="skip-link screen-reader-text" href="index.html#content">Skip to content</a>
 
-    <main>
-        <section class="video-section">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/74YCSMByYRg?si=TbxAmlh5kOukB7Bi&autoplay=1&mute=1&controls=0"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-        </section>
+<header id="site-header" class="site-header dynamic-header menu-dropdown-tablet" role="banner">
+	<div class="header-inner">
+		<div class="site-branding show-logo">
+							<div class="site-logo show">
+					<a href="index.html" class="custom-logo-link" rel="home" aria-current="page"><img width="512" height="512" src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=512%2C512&amp;ssl=1" class="custom-logo jetpack-lazy-image" alt="Comex Farm" decoding="async" data-lazy-srcset="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?w=512&amp;ssl=1 512w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=270%2C270&amp;ssl=1 270w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=192%2C192&amp;ssl=1 192w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=180%2C180&amp;ssl=1 180w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=32%2C32&amp;ssl=1 32w" data-lazy-sizes="(max-width: 512px) 100vw, 512px" data-lazy-src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=512%2C512&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></a>				</div>
+					</div>
 
-        <section id="services" class="services">
-            <h2>Our Services</h2>
-            <div class="service-cards">
-                <div class="card">
-                    <i class="fas fa-apple-alt"></i>
-                    <h3>Fresh Fruit</h3>
-                    <p>We bring you the freshest products from Vietnam, sourced directly from local farmers.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-seedling"></i>
-                    <h3>Dried Fruit</h3>
-                    <p>Delicious and nutritious dried fruits, hand-selected and dried to perfection.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-spa"></i>
-                    <h3>Spices</h3>
-                    <p>Organic spices that add flavor to your meals while supporting sustainable farming.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-rice"></i>
-                    <h3>Rice</h3>
-                    <p>High-quality rice and rice-based products that cater to all tastes and diets.</p>
-                </div>
-            </div>
-        </section>
+					<nav class="site-navigation show">
+				<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-53 current_page_item menu-item-72"><a href="index.html" aria-current="page">Home</a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="https://comexfarm.com/services/">Services</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="https://comexfarm.com/about-us/">About Us</a></li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="https://comexfarm.com/gallery/">Gallery</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="https://comexfarm.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-77" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="tel:%+84%20912%20438%20547">Get a free quote  +84 912 438 547</a></li>
+</ul></div>			</nav>
+			<div class="site-navigation-toggle-holder show">
+				<div class="site-navigation-toggle" role="button" tabindex="0">
+					<i class="eicon-menu-bar" aria-hidden="true"></i>
+					<span class="screen-reader-text">Menu</span>
+				</div>
+			</div>
+			<nav class="site-navigation-dropdown show">
+				<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-53 current_page_item menu-item-72"><a href="index.html" aria-current="page">Home</a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="https://comexfarm.com/services/">Services</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="https://comexfarm.com/about-us/">About Us</a></li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="https://comexfarm.com/gallery/">Gallery</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="https://comexfarm.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-77" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="tel:%+84%20912%20438%20547">Get a free quote  +84 912 438 547</a></li>
+</ul></div>			</nav>
+			</div>
+</header>
 
-        <section id="testimonials" class="testimonials">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-container">
-                <div class="testimonial-card">
-                    <p>"Comex Farm's dragon fruit is simply the best we've ever tasted. Their commitment to organic and
-                        sustainable farming practices shines through."</p>
-                    <div class="client-rating">★★★★★</div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Their attention to detail ensures that our orders are always perfect and delivered on time.
-                        Highly recommend Comex Farm!"</p>
-                    <div class="client-rating">★★★★★</div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Comex Farm made the importing process easy and stress-free. Their products have exceeded my
-                        expectations."</p>
-                    <div class="client-rating">★★★★★</div>
-                </div>
-            </div>
-        </section>
-    </main>
+<main id="content" class="site-main post-53 page type-page status-publish hentry">
 
-    <footer class="footer">
-        <p>&copy; 2023 Comex Farm CO., LTD</p>
-        <ul>
-            <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
-        </ul>
-    </footer>
-</body>
 
+	<div class="page-content">
+				<div data-elementor-type="wp-page" data-elementor-id="53" class="elementor elementor-53">
+							<div class="elementor-element elementor-element-bb6a19b e-grid e-con-boxed e-con" data-id="bb6a19b" data-element_type="container" data-settings="{&quot;grid_columns_grid&quot;:{&quot;unit&quot;:&quot;fr&quot;,&quot;size&quot;:&quot;1&quot;,&quot;sizes&quot;:[]},&quot;grid_rows_grid&quot;:{&quot;unit&quot;:&quot;fr&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;grid_rows_grid_mobile&quot;:{&quot;unit&quot;:&quot;fr&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;content_width&quot;:&quot;boxed&quot;,&quot;grid_columns_grid_tablet&quot;:{&quot;unit&quot;:&quot;fr&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;grid_columns_grid_mobile&quot;:{&quot;unit&quot;:&quot;fr&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;grid_rows_grid_tablet&quot;:{&quot;unit&quot;:&quot;fr&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-cc15468 elementor-widget__width-inherit animated-slow elementor-invisible elementor-widget elementor-widget-video" data-id="cc15468" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=74YCSMByYRg&quot;,&quot;start&quot;:2,&quot;end&quot;:35,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;lazy_load&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;youtube&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.15.0 - 20-08-2023 */
+.elementor-widget-video .elementor-widget-container{overflow:hidden;transform:translateZ(0)}.elementor-widget-video .elementor-wrapper{aspect-ratio:var(--video-aspect-ratio)}.elementor-widget-video .elementor-wrapper iframe,.elementor-widget-video .elementor-wrapper video{height:100%;width:100%;display:flex;border:none;background-color:#000}@supports not (aspect-ratio:1/1){.elementor-widget-video .elementor-wrapper{position:relative;overflow:hidden;height:0;padding-bottom:calc(100% / var(--video-aspect-ratio))}.elementor-widget-video .elementor-wrapper iframe,.elementor-widget-video .elementor-wrapper video{position:absolute;top:0;right:0;bottom:0;left:0}}.elementor-widget-video .elementor-open-inline .elementor-custom-embed-image-overlay{position:absolute;top:0;right:0;bottom:0;left:0;background-size:cover;background-position:50%}.elementor-widget-video .elementor-custom-embed-image-overlay{cursor:pointer;text-align:center}.elementor-widget-video .elementor-custom-embed-image-overlay:hover .elementor-custom-embed-play i{opacity:1}.elementor-widget-video .elementor-custom-embed-image-overlay img{display:block;width:100%;aspect-ratio:var(--video-aspect-ratio);-o-object-fit:cover;object-fit:cover;-o-object-position:center center;object-position:center center}@supports not (aspect-ratio:1/1){.elementor-widget-video .elementor-custom-embed-image-overlay{position:relative;overflow:hidden;height:0;padding-bottom:calc(100% / var(--video-aspect-ratio))}.elementor-widget-video .elementor-custom-embed-image-overlay img{position:absolute;top:0;right:0;bottom:0;left:0}}.elementor-widget-video .e-hosted-video .elementor-video{-o-object-fit:cover;object-fit:cover}.e-con-inner>.elementor-widget-video,.e-con>.elementor-widget-video{width:var(--container-widget-width);--flex-grow:var(--container-widget-flex-grow)}</style>		<div class="elementor-wrapper elementor-open-inline">
+			<div class="elementor-video"></div>		</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-606942dc elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="606942dc" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-41025659" data-id="41025659" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-36f3fb3c elementor-invisible elementor-widget elementor-widget-heading" data-id="36f3fb3c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.15.0 - 20-08-2023 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h3 class="elementor-heading-title elementor-size-default">What Makes Us Different?</h3>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-547d8dc0 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="547d8dc0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-3b37d269" data-id="3b37d269" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-3d64a9ba elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="3d64a9ba" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="wp-content/plugins/elementor/assets/css/widget-icon-box.min.css">		<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<a class="elementor-icon elementor-animation-" href="https://comexfarm.com/services/">
+				<svg xmlns="http://www.w3.org/2000/svg" id="ba97938d-80bd-4fd9-97c7-f57770ddcd52" data-name="Layer 1" width="30.9982" height="46.2559" viewBox="0 0 30.9982 46.2559"><path d="M12.8335,5.5693,12.08,5.125V6c0,8.2231-3.3921,12.0073-6.9834,16.0137-.707.789-1.4219,1.5864-2.1206,2.4262a11.9674,11.9674,0,0,0-2.898,9.17,13.8679,13.8679,0,0,0,5.4151,9.2412,14.8309,14.8309,0,0,0,5.5708,2.2842,24.1057,24.1057,0,0,1-4.2656,5.4843l.6474.7618a25.8568,25.8568,0,0,0,4.6494-6.05,19.0779,19.0779,0,0,0,9.7285-.8018c4.6963-1.7842,7.7647-5.6514,8.8741-11.1816C33.1445,21.1436,20.082,9.8408,12.8335,5.5693ZM29.7168,33.15c-1.0527,5.251-3.8281,8.7646-8.249,10.4434a17.968,17.968,0,0,1-8.8428.8251c.7588-1.34,1.5121-2.8373,2.231-4.4478l.0268.067,7.2959-2.9219-.3711-.9277L15.373,38.7651c.6528-1.562,1.26-3.2237,1.8-4.9741l6.4608-2.9971-.42-.9062-5.6654,2.628A50.1221,50.1221,0,0,0,19.1,24.8184l-.9922-.1172a49.6605,49.6605,0,0,1-1.6151,7.9014l-4.2364-4.8409-.753.6582,4.6482,5.31c-.4952,1.5862-1.0421,3.1035-1.6311,4.5277l-3.8159-4.3594-.7529.6582,4.128,4.716a51.1185,51.1185,0,0,1-2.4864,4.9686,14.1056,14.1056,0,0,1-5.4976-2.1894,12.8445,12.8445,0,0,1-5.0239-8.5567A10.9889,10.9889,0,0,1,3.7441,25.08c.691-.83,1.3975-1.6187,2.0967-2.3984C9.4341,18.6724,12.835,14.8784,13.0669,6.88,20.2139,11.3257,31.9736,21.897,29.7168,33.15Z" transform="translate(-0.0001 -5.125)"></path><path d="M14.4888,10.166a10.9377,10.9377,0,0,1-1.274,5.815A21.11,21.11,0,0,1,10.28,20.6323l.7129.7012a22.0859,22.0859,0,0,0,3.1162-4.9063,12.0019,12.0019,0,0,0,1.3677-6.4116Z" transform="translate(-0.0001 -5.125)"></path><path d="M7.4312,23.6079l.62.7842a17.4407,17.4407,0,0,0,2.1416-2.1152l-.7647-.6446A16.3138,16.3138,0,0,1,7.4312,23.6079Z" transform="translate(-0.0001 -5.125)"></path></svg>				</a>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h4 class="elementor-icon-box-title">
+					<a href="https://comexfarm.com/services/" >
+						Exceptional Quality Assurance					</a>
+				</h4>
+									<p class="elementor-icon-box-description">
+						At Comex Farm, quality is our top priority. We employ stringent measures at every stage to meet international standards. We're committed to delivering the best products.					</p>
+							</div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7e77d058" data-id="7e77d058" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-12714a89 elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="12714a89" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<a class="elementor-icon elementor-animation-" href="https://comexfarm.com/services/">
+				<svg xmlns="http://www.w3.org/2000/svg" id="bda09a0e-c6ed-48ff-9ca6-c167fddb5801" data-name="Layer 1" width="46" height="46.0728" viewBox="0 0 46 46.0728"><path d="M45.9688,27.3652a3.6246,3.6246,0,0,0-1.1514-2.707,5.2,5.2,0,0,0-1.2578-.8711,3.7508,3.7508,0,0,0,3.69-3.9907,4.1352,4.1352,0,0,0-3.8311-4.2847H29.4082a82.3159,82.3159,0,0,0,.9277-9.084,6.4458,6.4458,0,0,0-5.2841-6.92l-.4571-.0781-.1118.45c-.9717,3.9155-3.0786,12.2983-4.0967,16a7.2013,7.2013,0,0,1-4.873,5.1369V18.86H1.25V44.9766H15.5132V42.4633l7.8286,2.87L36.16,45.3262a13.0384,13.0384,0,0,0,2.1347.1758A7.2793,7.2793,0,0,0,42.69,44.33a3.17,3.17,0,0,0,1.2276-2.378A3.2966,3.2966,0,0,0,43.03,39.458a5.9978,5.9978,0,0,0-2.085-1.4033,6.026,6.026,0,0,0,2.99-1.2,2.8136,2.8136,0,0,0,1.0079-2.2109c0-1.8116-1.3-2.9561-2.9414-3.6475a6.1057,6.1057,0,0,0,2.8818-1.2354A3.0528,3.0528,0,0,0,45.9688,27.3652ZM2.25,43.9766V19.86H5.04V43.9766Zm12.2632,0H6.04V19.86h8.4736ZM39.0684,30.2207a14.6067,14.6067,0,0,0-2.0557-.1533l-.0684.9951a18.5,18.5,0,0,0,1.95.1494c2.2217.3154,5.0489,1.2266,5.0489,3.4317a1.8272,1.8272,0,0,1-.6631,1.455c-1.18,1.0235-3.585,1.1973-5.4824,1.1006a14.4507,14.4507,0,0,0-1.5352-.1445l-.09.9951c.163.0234.6982.0938,1.4306.1357,1.624.2344,3.6543.8018,4.6846,1.9424A2.3034,2.3034,0,0,1,42.92,41.89a2.18,2.18,0,0,1-.8515,1.6573c-1.4424,1.1445-4.29,1.0371-5.8252.7861H23.52l-7.8608-2.8818-.1455.3976V21.667l.0776.3652A8.2284,8.2284,0,0,0,21.35,16.1445c.9814-3.5678,2.9687-11.4614,3.9858-15.5493a5.4587,5.4587,0,0,1,4.002,5.7866,77.9564,77.9564,0,0,1-1.0166,9.5376l-.1113.5923L43.376,16.51a3.1508,3.1508,0,0,1,2.874,3.2866A2.8,2.8,0,0,1,43.4189,22.79H39.2383c-.336-.0131-.6612-.0112-.9649.0005l.02.9995H39.15c1.56.0577,3.7715.4346,4.9746,1.59a2.624,2.624,0,0,1,.8438,1.9853,2.0644,2.0644,0,0,1-.7422,1.6416C43.085,30.001,40.9062,30.2324,39.0684,30.2207Z" transform="translate(-1.25 0.5708)"></path><path d="M28.2578,7.3916a4.8906,4.8906,0,0,0-2.084-4.6758l-.5312.8477A3.85,3.85,0,0,1,27.2656,7.26Z" transform="translate(-1.25 0.5708)"></path></svg>				</a>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h4 class="elementor-icon-box-title">
+					<a href="https://comexfarm.com/services/" >
+						Sustainable Farming Practices					</a>
+				</h4>
+									<p class="elementor-icon-box-description">
+						Comex Farm is committed to sustainable farming that produces excellent crops and prioritizes the environment. This includes responsible water management, organic farming, and reducing our transportation's carbon footprint.					</p>
+							</div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7e165777" data-id="7e165777" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-7cf99118 elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="7cf99118" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<a class="elementor-icon elementor-animation-" href="https://comexfarm.com/services/">
+				<svg xmlns="http://www.w3.org/2000/svg" id="f6d8a742-31ed-4211-a60b-cd3945bc1336" data-name="Layer 1" width="45" height="45" viewBox="0 0 45 45"><path d="M46.3086,39.48l-.0193-.46H43.3275V6.7632A5.6428,5.6428,0,0,0,41.89,2.4591a4.327,4.327,0,0,0-3.3091-.9682H5.6439v.0383a3.17,3.17,0,0,0-.4245-.0383,3.2173,3.2173,0,0,0-2.3637.92C1.3024,3.964,1.3121,7.0986,1.3217,9.1692V10.07H8.4224l.01,31.0681a5.62,5.62,0,0,0,1.0613,4.2657,3.234,3.234,0,0,0,2.5373,1.0641h30.39a3.0173,3.0173,0,0,0,2.2383-.9586C46.01,44.11,46.3954,41.3876,46.3086,39.48ZM2.2865,9.1117c-.01-1.9172-.01-4.7642,1.2542-6.03A2.2927,2.2927,0,0,1,5.2194,2.45c2.6917,0,3.1644,3.1441,3.203,6.6622ZM12.0306,45.51a2.29,2.29,0,0,1-1.8138-.7382,4.9039,4.9039,0,0,1-.83-3.5755V9.591c0-1.9555,0-5.4544-1.7075-7.1415h30.94a3.3649,3.3649,0,0,1,2.6146.7093,4.82,4.82,0,0,1,1.1287,3.6044V39.02h-26.55v.4793c0,.2492,0,.4888-.0193.7285h-2.711v.9586h2.6434C15.4073,44.0909,14.182,45.51,12.0306,45.51Zm31.9337-.6615a2.0734,2.0734,0,0,1-1.5437.6615H14.8863A6.3706,6.3706,0,0,0,16.69,41.1863c.0386-.3068.0579-.6231.0675-.9586a2.0615,2.0615,0,0,0,.01-.2493H45.3535C45.3535,41.4355,45.0544,43.7074,43.9643,44.8481Z" transform="translate(-1.3202 -1.4682)"></path><path d="M33.5113,18.66,29.49,17.8427a.966.966,0,0,1-.6463-.4662L26.8182,13.83a.9985.9985,0,0,0-1.677,0l-2.0261,3.5465a.9643.9643,0,0,1-.6454.4662l-4.0211.8177a.9568.9568,0,0,0-.5186,1.5863l2.769,3.01a.9551.9551,0,0,1,.2468.7541l-.46,4.053a.9451.9451,0,0,0,.3924.8827.9564.9564,0,0,0,.9653.0964l3.7384-1.6859a.9678.9678,0,0,1,.7961,0l3.7376,1.6859a.96.96,0,0,0,.9666-.0964.9459.9459,0,0,0,.391-.8827l-.46-4.053a.9514.9514,0,0,1,.2469-.7541l2.769-3.01a.957.957,0,0,0-.5182-1.5858Zm-2.9631,3.95a1.9114,1.9114,0,0,0-.4937,1.5081l.4607,4.0521-3.7365-1.686a1.9321,1.9321,0,0,0-1.597,0L21.4451,28.17l.46-4.0525a1.91,1.91,0,0,0-.4937-1.5081l-2.769-3.01,4.0207-.8177a1.9285,1.9285,0,0,0,1.2917-.9323L25.98,14.3032l2.0256,3.5461a1.9259,1.9259,0,0,0,1.2908.9323l4.0211.8182Z" transform="translate(-1.3202 -1.4682)"></path><rect x="11.7657" y="4.3284" width="26.5936" height="0.9586"></rect></svg>				</a>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h4 class="elementor-icon-box-title">
+					<a href="https://comexfarm.com/services/" >
+						Global Reach &amp; Local Expertise					</a>
+				</h4>
+									<p class="elementor-icon-box-description">
+						With a global customer base, Comex Farm has the capability and experience to export our products worldwide. However, what sets us apart is our deep understanding of local conditions and traditions. We leverage our knowledge of the Vietnamese landscape, climate, and culture to produce and export products that encapsulate the essence of Vietnam.					</p>
+							</div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-3bb32925" data-id="3bb32925" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1f146751 elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="1f146751" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<a class="elementor-icon elementor-animation-" href="https://comexfarm.com/services/">
+				<svg xmlns="http://www.w3.org/2000/svg" id="b58029ff-e80b-4acc-93c7-1727c7df1104" data-name="Layer 1" width="45" height="45" viewBox="0 0 45 45"><path d="M12.375,16.7c1.9678,0,2.7437,1.9238,2.8794,2.9409l.9912-.1318C16.07,18.1919,15.0352,15.7,12.375,15.7c-2.6846,0-3.56,2.5132-3.6489,3.8418l.998.0664C9.7261,19.5791,9.9453,16.7,12.375,16.7Z"></path><path d="M26.3252,16.7c1.9668,0,2.7432,1.9238,2.88,2.9414l.99-.1328C30.02,18.1914,28.9844,15.7,26.3252,15.7c-2.6836,0-3.5606,2.5127-3.6494,3.8418l.998.0664C23.6758,19.58,23.8965,16.7,26.3252,16.7Z"></path><path d="M20.25,35.7246c-7.1958,0-11.2275-5.9639-12.354-9.1172l-.9414.336c1.2085,3.3828,5.5425,9.7812,13.2954,9.7812,7.7363,0,12.5137-6.3789,13.96-9.7519l-.92-.3946C31.9346,29.7422,27.4648,35.7246,20.25,35.7246Z"></path><path d="M22.5,0A22.5,22.5,0,1,0,45,22.5,22.5253,22.5253,0,0,0,22.5,0Zm0,44A21.5,21.5,0,1,1,44,22.5,21.5242,21.5242,0,0,1,22.5,44Z"></path></svg>				</a>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h4 class="elementor-icon-box-title">
+					<a href="https://comexfarm.com/services/" >
+						Community-Centric Approach					</a>
+				</h4>
+									<p class="elementor-icon-box-description">
+						Comex Farm believes in giving back to the community that nurtures us. We actively engage with local communities, providing employment opportunities and investing in social development projects. We are committed to fostering sustainable growth not only in agriculture but also in the regions we operate.					</p>
+							</div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+							</div>
+		</section>
+		<div class="elementor-element elementor-element-5095b16 e-flex e-con-boxed e-con" data-id="5095b16" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+					</div>
+				</div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-160ed46d elementor-section-height-min-height elementor-section-content-top elementor-section-full_width elementor-section-items-stretch elementor-section-height-default" data-id="160ed46d" data-element_type="section" id="about">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5842a90d" data-id="5842a90d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-60fa254f elementor-widget elementor-widget-image" data-id="60fa254f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.15.0 - 20-08-2023 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>												<img decoding="async" width="768" height="1024" src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/02/1705899422198.jpeg?fit=768%2C1024&amp;ssl=1" class="attachment-large size-large wp-image-520 jetpack-lazy-image" alt data-lazy-srcset="https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/02/1705899422198.jpeg?w=1280&amp;ssl=1 1280w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/02/1705899422198.jpeg?resize=225%2C300&amp;ssl=1 225w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/02/1705899422198.jpeg?resize=768%2C1024&amp;ssl=1 768w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/02/1705899422198.jpeg?resize=1152%2C1536&amp;ssl=1 1152w" data-lazy-sizes="(max-width: 768px) 100vw, 768px" data-lazy-src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/02/1705899422198.jpeg?fit=768%2C1024&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-45f4039d" data-id="45f4039d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-6ab05dc7 elementor-widget-divider--view-line elementor-invisible elementor-widget elementor-widget-divider" data-id="6ab05dc7" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.15.0 - 20-08-2023 */
+.elementor-widget-divider{--divider-border-style:none;--divider-border-width:1px;--divider-color:#0c0d0e;--divider-icon-size:20px;--divider-element-spacing:10px;--divider-pattern-height:24px;--divider-pattern-size:20px;--divider-pattern-url:none;--divider-pattern-repeat:repeat-x}.elementor-widget-divider .elementor-divider{display:flex}.elementor-widget-divider .elementor-divider__text{font-size:15px;line-height:1;max-width:95%}.elementor-widget-divider .elementor-divider__element{margin:0 var(--divider-element-spacing);flex-shrink:0}.elementor-widget-divider .elementor-icon{font-size:var(--divider-icon-size)}.elementor-widget-divider .elementor-divider-separator{display:flex;margin:0;direction:ltr}.elementor-widget-divider--view-line_icon .elementor-divider-separator,.elementor-widget-divider--view-line_text .elementor-divider-separator{align-items:center}.elementor-widget-divider--view-line_icon .elementor-divider-separator:after,.elementor-widget-divider--view-line_icon .elementor-divider-separator:before,.elementor-widget-divider--view-line_text .elementor-divider-separator:after,.elementor-widget-divider--view-line_text .elementor-divider-separator:before{display:block;content:"";border-bottom:0;flex-grow:1;border-top:var(--divider-border-width) var(--divider-border-style) var(--divider-color)}.elementor-widget-divider--element-align-left .elementor-divider .elementor-divider-separator>.elementor-divider__svg:first-of-type{flex-grow:0;flex-shrink:100}.elementor-widget-divider--element-align-left .elementor-divider-separator:before{content:none}.elementor-widget-divider--element-align-left .elementor-divider__element{margin-left:0}.elementor-widget-divider--element-align-right .elementor-divider .elementor-divider-separator>.elementor-divider__svg:last-of-type{flex-grow:0;flex-shrink:100}.elementor-widget-divider--element-align-right .elementor-divider-separator:after{content:none}.elementor-widget-divider--element-align-right .elementor-divider__element{margin-right:0}.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator{border-top:var(--divider-border-width) var(--divider-border-style) var(--divider-color)}.elementor-widget-divider--separator-type-pattern{--divider-border-style:none}.elementor-widget-divider--separator-type-pattern.elementor-widget-divider--view-line .elementor-divider-separator,.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:after,.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:before,.elementor-widget-divider--separator-type-pattern:not([class*=elementor-widget-divider--view]) .elementor-divider-separator{width:100%;min-height:var(--divider-pattern-height);-webkit-mask-size:var(--divider-pattern-size) 100%;mask-size:var(--divider-pattern-size) 100%;-webkit-mask-repeat:var(--divider-pattern-repeat);mask-repeat:var(--divider-pattern-repeat);background-color:var(--divider-color);-webkit-mask-image:var(--divider-pattern-url);mask-image:var(--divider-pattern-url)}.elementor-widget-divider--no-spacing{--divider-pattern-size:auto}.elementor-widget-divider--bg-round{--divider-pattern-repeat:round}.rtl .elementor-widget-divider .elementor-divider__text{direction:rtl}.e-con-inner>.elementor-widget-divider,.e-con>.elementor-widget-divider{width:var(--container-widget-width,100%);--flex-grow:var(--container-widget-flex-grow)}</style>		<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-798d7e28 elementor-invisible elementor-widget elementor-widget-heading" data-id="798d7e28" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:&quot;400&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Welcome to<br>Comex Farm</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8ff759d elementor-widget elementor-widget-text-editor" data-id="8ff759d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.15.0 - 20-08-2023 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#69727d;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#69727d;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<p>Welcome to Comex Farm, your premier source for fresh fruits, aromatic spices, and premium rice Agro products in Vietnam. With over a decade of experience, we&#8217;re dedicated to delivering top-quality, sustainably sourced products that enhance your culinary experiences. Our fruits are picked at peak ripeness, bursting with flavor and nutrients. Our spices capture Vietnam&#8217;s culinary heritage, and our rice Agro embodies nourishment and wholesomeness. As a trusted manufacturer and supplier, our commitment to quality assurance ensures reliability and consistency. Join us in celebrating Vietnam&#8217;s flavors and aromas. Comex Farm – your partner for a decade of passion and expertise. </p>						</div>
+				</div>
+				<div class="elementor-element elementor-element-4f4d5277 elementor-widget elementor-widget-button" data-id="4f4d5277" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="https://comexfarm.com/about-us/">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">More About Us</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-731d807d elementor-section-height-min-height elementor-section-items-top elementor-section-content-top elementor-section-boxed elementor-section-height-default" data-id="731d807d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6b1adf14" data-id="6b1adf14" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-73d8095e elementor-invisible elementor-widget elementor-widget-heading" data-id="73d8095e" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Our services</h2>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-4a3cb80c elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="4a3cb80c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-629206dd" data-id="629206dd" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-7b02c1b0 elementor-position-top elementor-widget elementor-widget-image-box" data-id="7b02c1b0" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.15.0 - 20-08-2023 */
+.elementor-widget-image-box .elementor-image-box-content{width:100%}@media (min-width:768px){.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper,.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{display:flex}.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{text-align:right;flex-direction:row-reverse}.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper{text-align:left;flex-direction:row}.elementor-widget-image-box.elementor-position-top .elementor-image-box-img{margin:auto}.elementor-widget-image-box.elementor-vertical-align-top .elementor-image-box-wrapper{align-items:flex-start}.elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper{align-items:center}.elementor-widget-image-box.elementor-vertical-align-bottom .elementor-image-box-wrapper{align-items:flex-end}}@media (max-width:767px){.elementor-widget-image-box .elementor-image-box-img{margin-left:auto!important;margin-right:auto!important;margin-bottom:15px}}.elementor-widget-image-box .elementor-image-box-img{display:inline-block}.elementor-widget-image-box .elementor-image-box-title a{color:inherit}.elementor-widget-image-box .elementor-image-box-wrapper{text-align:center}.elementor-widget-image-box .elementor-image-box-description{margin:0}</style><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://comexfarm.com/services/"><img decoding="async" width="468" height="312" src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/freshfruit.jpeg?fit=468%2C312&amp;ssl=1" class="attachment-large size-large wp-image-121 jetpack-lazy-image" alt data-lazy-srcset="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/freshfruit.jpeg?w=468&amp;ssl=1 468w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/freshfruit.jpeg?resize=300%2C200&amp;ssl=1 300w" data-lazy-sizes="(max-width: 468px) 100vw, 468px" data-lazy-src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/freshfruit.jpeg?fit=468%2C312&amp;ssl=1&amp;is-pending-load=1" srcset="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/freshfruit.jpeg?w=468&amp;ssl=1 468w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/freshfruit.jpeg?resize=300%2C200&amp;ssl=1 300w" sizes="(max-width: 468px) 100vw, 468px"></a></figure><div class="elementor-image-box-content"><h4 class="elementor-image-box-title"><a href="https://comexfarm.com/services/">Fresh Fruit</a></h4><p class="elementor-image-box-description">We work with local farmers in Vietnam to bring you the freshest products at fair prices, without middlemen.</p></div></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-1f323472" data-id="1f323472" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-73af198a elementor-position-top elementor-widget elementor-widget-image-box" data-id="73af198a" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://comexfarm.com/services/"><img decoding="async" src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/dried-fruits.jpg?fit=%2C&amp;ssl=1" class="attachment-full size-full wp-image-123 jetpack-lazy-image" alt data-lazy-src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/dried-fruits.jpg?fit=%2C&amp;ssl=1&amp;is-pending-load=1"></a></figure><div class="elementor-image-box-content"><h4 class="elementor-image-box-title"><a href="https://comexfarm.com/services/">Dried Fruit</a></h4><p class="elementor-image-box-description">We offer delicious and nutritious dried fruits, including apricots, figs, dates, and more, hand-selected and dried to perfection for our customers.</p></div></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-179c83a3" data-id="179c83a3" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-77a53d67 elementor-position-top elementor-widget elementor-widget-image-box" data-id="77a53d67" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://comexfarm.com/services/"><img decoding="async" width="1200" height="817" src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/spices.jpg?fit=1200%2C817&amp;ssl=1" class="attachment-full size-full wp-image-131 jetpack-lazy-image" alt data-lazy-srcset="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/spices.jpg?w=1200&amp;ssl=1 1200w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/spices.jpg?resize=300%2C204&amp;ssl=1 300w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/spices.jpg?resize=1024%2C697&amp;ssl=1 1024w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/spices.jpg?resize=768%2C523&amp;ssl=1 768w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/spices.jpg?fit=1200%2C817&amp;ssl=1&amp;is-pending-load=1" srcset="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/spices.jpg?w=1200&amp;ssl=1 1200w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/spices.jpg?resize=300%2C204&amp;ssl=1 300w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/spices.jpg?resize=1024%2C697&amp;ssl=1 1024w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/spices.jpg?resize=768%2C523&amp;ssl=1 768w" sizes="(max-width: 800px) 100vw, 800px"></a></figure><div class="elementor-image-box-content"><h4 class="elementor-image-box-title"><a href="https://comexfarm.com/services/">Spices</a></h4><p class="elementor-image-box-description">Choose Comex Farm's organic spices to flavor your meals sustainably and support local farming, communities, and your health.</p></div></div>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-4d7e2662" data-id="4d7e2662" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-a500b24 elementor-position-top elementor-widget elementor-widget-image-box" data-id="a500b24" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://comexfarm.com/services/"><img decoding="async" width="2560" height="1440" src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?fit=2560%2C1440&amp;ssl=1" class="attachment-full size-full wp-image-496 jetpack-lazy-image" alt data-lazy-srcset="https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?w=2560&amp;ssl=1 2560w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?resize=2048%2C1152&amp;ssl=1 2048w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?w=1600&amp;ssl=1 1600w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?w=2400&amp;ssl=1 2400w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?fit=2560%2C1440&amp;ssl=1&amp;is-pending-load=1" srcset="https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?w=2560&amp;ssl=1 2560w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?resize=2048%2C1152&amp;ssl=1 2048w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?w=1600&amp;ssl=1 1600w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2024/01/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg?w=2400&amp;ssl=1 2400w" sizes="(max-width: 800px) 100vw, 800px"></a></figure><div class="elementor-image-box-content"><h4 class="elementor-image-box-title"><a href="https://comexfarm.com/services/">Rice</a></h4><p class="elementor-image-box-description">ComexFarm has a wide variety of high-quality rice and rice-based products from around the world including different types of rice and products like flour, noodles, and crackers. We have options for all tastes and diets. Visit us now!</p></div></div>		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<div class="elementor-element elementor-element-30f4d110 elementor-align-center elementor-mobile-align-left elementor-widget elementor-widget-button" data-id="30f4d110" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="https://comexfarm.com/services/">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">View All Services</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2493b982 elementor-section-height-min-height elementor-section-items-stretch elementor-section-content-top elementor-section-full_width elementor-section-height-default" data-id="2493b982" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[],&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_duration&quot;:5000,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;background_slideshow_transition_duration&quot;:500}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5df71983" data-id="5df71983" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-72cae594 elementor-invisible elementor-widget elementor-widget-heading" data-id="72cae594" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Every<br>Crop<br>Matters</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4372beef elementor-widget-divider--view-line elementor-invisible elementor-widget elementor-widget-divider" data-id="4372beef" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;,&quot;_animation_delay&quot;:&quot;300&quot;}" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-43e1ffd5 elementor-widget elementor-widget-text-editor" data-id="43e1ffd5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>At Comex Farm, we embrace a profound belief – &#8220;Every Crop Matters.&#8221; This core philosophy is woven into the very fabric of our agricultural practices, guiding our daily efforts and shaping our commitment to excellence.</p>						</div>
+				</div>
+				<div class="elementor-element elementor-element-323eb89d elementor-widget elementor-widget-button" data-id="323eb89d" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="https://comexfarm.com/gallery/">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">view projects</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3b757832" data-id="3b757832" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:133,&quot;url&quot;:&quot;https:\/\/comexfarm.com\/wp-content\/uploads\/2023\/09\/rice.jpg&quot;},{&quot;id&quot;:131,&quot;url&quot;:&quot;https:\/\/comexfarm.com\/wp-content\/uploads\/2023\/09\/spices.jpg&quot;},{&quot;id&quot;:124,&quot;url&quot;:&quot;https:\/\/comexfarm.com\/wp-content\/uploads\/2023\/09\/dried-fruits-1.jpg&quot;},{&quot;id&quot;:121,&quot;url&quot;:&quot;https:\/\/comexfarm.com\/wp-content\/uploads\/2023\/09\/freshfruit.jpeg&quot;},{&quot;id&quot;:496,&quot;url&quot;:&quot;https:\/\/comexfarm.com\/wp-content\/uploads\/2024\/01\/z5036358860534_8d2a9a9b06a56645b94e6f1d60731159.jpg&quot;}],&quot;background_slideshow_slide_duration&quot;:1500,&quot;background_slideshow_slide_transition&quot;:&quot;slide_left&quot;,&quot;background_slideshow_transition_duration&quot;:1000,&quot;background_slideshow_lazyload&quot;:&quot;yes&quot;,&quot;background_slideshow_ken_burns&quot;:&quot;yes&quot;,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_ken_burns_zoom_direction&quot;:&quot;in&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-6b65cfa1 elementor-widget elementor-widget-spacer" data-id="6b65cfa1" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.15.0 - 20-08-2023 */
+.elementor-column .elementor-spacer-inner{height:var(--spacer-size)}.e-con{--container-widget-width:100%}.e-con-inner>.elementor-widget-spacer,.e-con>.elementor-widget-spacer{width:var(--container-widget-width,var(--spacer-size));--align-self:var(--container-widget-align-self,initial);--flex-shrink:0}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container,.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer,.e-con>.elementor-widget-spacer>.elementor-widget-container,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer{height:100%}.e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner,.e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner{height:var(--container-widget-height,var(--spacer-size))}</style>		<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2cbb0a70 elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="2cbb0a70" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-77a9a96c" data-id="77a9a96c" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-27cf105b elementor-invisible elementor-widget elementor-widget-heading" data-id="27cf105b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">What Our Clients Say</h3>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-623f9c52 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="623f9c52" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-53758775" data-id="53758775" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-61a099b4 elementor--star-style-star_unicode elementor-widget elementor-widget-star-rating" data-id="61a099b4" data-element_type="widget" data-widget_type="star-rating.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.15.0 - 20-08-2023 */
+@charset "UTF-8";.elementor-star-rating{color:#ccd6df;font-family:eicons;display:inline-block}.elementor-star-rating i{display:inline-block;position:relative;font-style:normal;cursor:default}.elementor-star-rating i:before{content:"\e934";display:block;font-size:inherit;font-family:inherit;position:absolute;overflow:hidden;color:#f0ad4e;top:0;left:0}.elementor-star-rating .elementor-star-empty:before{content:none}.elementor-star-rating .elementor-star-1:before{width:10%}.elementor-star-rating .elementor-star-2:before{width:20%}.elementor-star-rating .elementor-star-3:before{width:30%}.elementor-star-rating .elementor-star-4:before{width:40%}.elementor-star-rating .elementor-star-5:before{width:50%}.elementor-star-rating .elementor-star-6:before{width:60%}.elementor-star-rating .elementor-star-7:before{width:70%}.elementor-star-rating .elementor-star-8:before{width:80%}.elementor-star-rating .elementor-star-9:before{width:90%}.elementor-star-rating__wrapper{display:flex;align-items:center}.elementor-star-rating__title{margin-right:10px}.elementor-star-rating--align-right .elementor-star-rating__wrapper{text-align:right;justify-content:flex-end}.elementor-star-rating--align-left .elementor-star-rating__wrapper{text-align:left;justify-content:flex-start}.elementor-star-rating--align-center .elementor-star-rating__wrapper{text-align:center;justify-content:center}.elementor-star-rating--align-justify .elementor-star-rating__title{margin-right:auto}@media (max-width:1024px){.elementor-star-rating-tablet--align-right .elementor-star-rating__wrapper{text-align:right;justify-content:flex-end}.elementor-star-rating-tablet--align-left .elementor-star-rating__wrapper{text-align:left;justify-content:flex-start}.elementor-star-rating-tablet--align-center .elementor-star-rating__wrapper{text-align:center;justify-content:center}.elementor-star-rating-tablet--align-justify .elementor-star-rating__title{margin-right:auto}}@media (max-width:767px){.elementor-star-rating-mobile--align-right .elementor-star-rating__wrapper{text-align:right;justify-content:flex-end}.elementor-star-rating-mobile--align-left .elementor-star-rating__wrapper{text-align:left;justify-content:flex-start}.elementor-star-rating-mobile--align-center .elementor-star-rating__wrapper{text-align:center;justify-content:center}.elementor-star-rating-mobile--align-justify .elementor-star-rating__title{margin-right:auto}}.last-star{letter-spacing:0}.elementor--star-style-star_unicode .elementor-star-rating{font-family:Arial,Helvetica,sans-serif}.elementor--star-style-star_unicode .elementor-star-rating i:not(.elementor-star-empty):before{content:"★"}</style>
+		<div class="elementor-star-rating__wrapper">
+						<div class="elementor-star-rating" title="5/5" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating"><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i> <span itemprop="ratingValue" class="elementor-screen-only">5/5</span></div>		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-53ea3c59 elementor-widget elementor-widget-testimonial" data-id="53ea3c59" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.15.0 - 20-08-2023 */
+.elementor-testimonial-wrapper{overflow:hidden;text-align:center}.elementor-testimonial-wrapper .elementor-testimonial-content{font-size:1.3em;margin-bottom:20px}.elementor-testimonial-wrapper .elementor-testimonial-name{line-height:1.5;display:block}.elementor-testimonial-wrapper .elementor-testimonial-job{font-size:.85em;display:block}.elementor-testimonial-wrapper .elementor-testimonial-meta{width:100%;line-height:1}.elementor-testimonial-wrapper .elementor-testimonial-meta-inner{display:inline-block}.elementor-testimonial-wrapper .elementor-testimonial-meta .elementor-testimonial-details,.elementor-testimonial-wrapper .elementor-testimonial-meta .elementor-testimonial-image{display:table-cell;vertical-align:middle}.elementor-testimonial-wrapper .elementor-testimonial-meta .elementor-testimonial-image img{width:60px;height:60px;border-radius:50%;-o-object-fit:cover;object-fit:cover;max-width:none}.elementor-testimonial-wrapper .elementor-testimonial-meta.elementor-testimonial-image-position-aside .elementor-testimonial-image{padding-right:15px}.elementor-testimonial-wrapper .elementor-testimonial-meta.elementor-testimonial-image-position-aside .elementor-testimonial-details{text-align:left}.elementor-testimonial-wrapper .elementor-testimonial-meta.elementor-testimonial-image-position-top .elementor-testimonial-details,.elementor-testimonial-wrapper .elementor-testimonial-meta.elementor-testimonial-image-position-top .elementor-testimonial-image{display:block}.elementor-testimonial-wrapper .elementor-testimonial-meta.elementor-testimonial-image-position-top .elementor-testimonial-image{margin-bottom:20px}</style>		<div class="elementor-testimonial-wrapper">
+							<div class="elementor-testimonial-content">"Comex Farm's dragon fruit is simply the best we've ever tasted. Their commitment to organic and sustainable farming practices shines through in the flavor and texture of their fruit. We're proud to partner with a company that is not only dedicated to excellence, but also to the well-being of our planet."</div>
+
+					</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-6a079325" data-id="6a079325" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-31434dc2 elementor--star-style-star_unicode elementor-widget elementor-widget-star-rating" data-id="31434dc2" data-element_type="widget" data-widget_type="star-rating.default">
+				<div class="elementor-widget-container">
+
+		<div class="elementor-star-rating__wrapper">
+						<div class="elementor-star-rating" title="5/5" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating"><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i> <span itemprop="ratingValue" class="elementor-screen-only">5/5</span></div>		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-429439ff elementor-widget elementor-widget-testimonial" data-id="429439ff" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+							<div class="elementor-testimonial-content">"We've been working with Comex Farm for a few years now and we couldn't be happier with their services. Their attention to detail and quality control processes ensure that our orders are always perfect and delivered on time. We highly recommend Comex Farm to anyone in need of a reliable and trustworthy agriculture exporter."</div>
+
+					</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-52b9e76d" data-id="52b9e76d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-b048465 elementor--star-style-star_unicode elementor-widget elementor-widget-star-rating" data-id="b048465" data-element_type="widget" data-widget_type="star-rating.default">
+				<div class="elementor-widget-container">
+
+		<div class="elementor-star-rating__wrapper">
+						<div class="elementor-star-rating" title="5/5" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating"><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i><i class="elementor-star-full">&#9733;</i> <span itemprop="ratingValue" class="elementor-screen-only">5/5</span></div>		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-22e6c22e elementor-widget elementor-widget-testimonial" data-id="22e6c22e" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+							<div class="elementor-testimonial-content">"As a small business owner, I was hesitant to start importing agriculture products from Vietnam, but Comex Farm made the process easy and stress-free. Their team of experts helped me navigate the complex logistics and paperwork involved, and their products have exceeded my expectations. I'm grateful to have found such a reliable partner in Comex Farm."</div>
+
+					</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1fc2301c elementor-section-height-min-height elementor-section-content-middle elementor-section-full_width elementor-section-items-stretch elementor-section-height-default" data-id="1fc2301c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-656d177d" data-id="656d177d" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-e-bg-lazyload=".elementor-element-populated">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-aabaea elementor-widget elementor-widget-spacer" data-id="aabaea" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1762b413" data-id="1762b413" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-7419fa42 elementor-widget-divider--view-line elementor-invisible elementor-widget elementor-widget-divider" data-id="7419fa42" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1b3deb7f elementor-invisible elementor-widget elementor-widget-heading" data-id="1b3deb7f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:&quot;400&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Ready to Savor the Essence of Vietnam?</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-cc24324 elementor-widget elementor-widget-text-editor" data-id="cc24324" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>We&#8217;re here to assist you in any way we can. Whether you have inquiries about our products, want to explore partnership opportunities, or simply want to chat about agriculture, we welcome your communication. Connect with us using the following contact information:</p><p>Email: info@comexfarm.com</p><p>Phone: <span style="color: #cf945f; white-space-collapse: preserve; font-family: var( --e-global-typography-text-font-family ), Sans-serif; font-size: var( --e-global-typography-text-font-size ); font-style: var( --e-global-typography-text-font-style ); font-weight: var( --e-global-typography-text-font-weight ); letter-spacing: var( --e-global-typography-text-letter-spacing ); text-transform: var( --e-global-typography-text-text-transform ); background-color: var( --e-global-color-3d761f9 );">+84 912 438 547</span></p>						</div>
+				</div>
+				<div class="elementor-element elementor-element-26db22ec elementor-widget elementor-widget-button" data-id="26db22ec" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="https://comexfarm.com/contact-us/">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">contact us</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c2845c1 elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c2845c1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-20372fbf" data-id="20372fbf" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-48428805 elementor-widget elementor-widget-image" data-id="48428805" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="800" height="188" src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/company_name-scaled.jpeg?fit=800%2C188&amp;ssl=1" class="attachment-large size-large wp-image-155 jetpack-lazy-image" alt data-lazy-srcset="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/company_name-scaled.jpeg?w=2560&amp;ssl=1 2560w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/company_name-scaled.jpeg?resize=300%2C70&amp;ssl=1 300w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/company_name-scaled.jpeg?resize=1024%2C240&amp;ssl=1 1024w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/company_name-scaled.jpeg?resize=768%2C180&amp;ssl=1 768w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/company_name-scaled.jpeg?resize=1536%2C360&amp;ssl=1 1536w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/company_name-scaled.jpeg?resize=2048%2C480&amp;ssl=1 2048w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/company_name-scaled.jpeg?w=1600&amp;ssl=1 1600w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/company_name-scaled.jpeg?w=2400&amp;ssl=1 2400w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/company_name-scaled.jpeg?fit=800%2C188&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">															</div>
+				</div>
+				<div class="elementor-element elementor-element-4d5c7f63 elementor-widget elementor-widget-text-editor" data-id="4d5c7f63" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Taste the goodness of nature: Premium quality agriculture products from our fields to your doorstep.</p>						</div>
+				</div>
+				<div class="elementor-element elementor-element-fa2095f elementor-shape-square e-grid-align-left e-grid-align-tablet-center elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="fa2095f" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.15.0 - 20-08-2023 */
+.elementor-widget-social-icons.elementor-grid-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-mobile-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-tablet-0 .elementor-widget-container{line-height:1;font-size:0}.elementor-widget-social-icons:not(.elementor-grid-0):not(.elementor-grid-tablet-0):not(.elementor-grid-mobile-0) .elementor-grid{display:inline-grid}.elementor-widget-social-icons .elementor-grid{grid-column-gap:var(--grid-column-gap,5px);grid-row-gap:var(--grid-row-gap,5px);grid-template-columns:var(--grid-template-columns);justify-content:var(--justify-content,center);justify-items:var(--justify-content,center)}.elementor-icon.elementor-social-icon{font-size:var(--icon-size,25px);line-height:var(--icon-size,25px);width:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)));height:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)))}.elementor-social-icon{--e-social-icon-icon-color:#fff;display:inline-flex;background-color:#69727d;align-items:center;justify-content:center;text-align:center;cursor:pointer}.elementor-social-icon i{color:var(--e-social-icon-icon-color)}.elementor-social-icon svg{fill:var(--e-social-icon-icon-color)}.elementor-social-icon:last-child{margin:0}.elementor-social-icon:hover{opacity:.9;color:#fff}.elementor-social-icon-android{background-color:#a4c639}.elementor-social-icon-apple{background-color:#999}.elementor-social-icon-behance{background-color:#1769ff}.elementor-social-icon-bitbucket{background-color:#205081}.elementor-social-icon-codepen{background-color:#000}.elementor-social-icon-delicious{background-color:#39f}.elementor-social-icon-deviantart{background-color:#05cc47}.elementor-social-icon-digg{background-color:#005be2}.elementor-social-icon-dribbble{background-color:#ea4c89}.elementor-social-icon-elementor{background-color:#d30c5c}.elementor-social-icon-envelope{background-color:#ea4335}.elementor-social-icon-facebook,.elementor-social-icon-facebook-f{background-color:#3b5998}.elementor-social-icon-flickr{background-color:#0063dc}.elementor-social-icon-foursquare{background-color:#2d5be3}.elementor-social-icon-free-code-camp,.elementor-social-icon-freecodecamp{background-color:#006400}.elementor-social-icon-github{background-color:#333}.elementor-social-icon-gitlab{background-color:#e24329}.elementor-social-icon-globe{background-color:#69727d}.elementor-social-icon-google-plus,.elementor-social-icon-google-plus-g{background-color:#dd4b39}.elementor-social-icon-houzz{background-color:#7ac142}.elementor-social-icon-instagram{background-color:#262626}.elementor-social-icon-jsfiddle{background-color:#487aa2}.elementor-social-icon-link{background-color:#818a91}.elementor-social-icon-linkedin,.elementor-social-icon-linkedin-in{background-color:#0077b5}.elementor-social-icon-medium{background-color:#00ab6b}.elementor-social-icon-meetup{background-color:#ec1c40}.elementor-social-icon-mixcloud{background-color:#273a4b}.elementor-social-icon-odnoklassniki{background-color:#f4731c}.elementor-social-icon-pinterest{background-color:#bd081c}.elementor-social-icon-product-hunt{background-color:#da552f}.elementor-social-icon-reddit{background-color:#ff4500}.elementor-social-icon-rss{background-color:#f26522}.elementor-social-icon-shopping-cart{background-color:#4caf50}.elementor-social-icon-skype{background-color:#00aff0}.elementor-social-icon-slideshare{background-color:#0077b5}.elementor-social-icon-snapchat{background-color:#fffc00}.elementor-social-icon-soundcloud{background-color:#f80}.elementor-social-icon-spotify{background-color:#2ebd59}.elementor-social-icon-stack-overflow{background-color:#fe7a15}.elementor-social-icon-steam{background-color:#00adee}.elementor-social-icon-stumbleupon{background-color:#eb4924}.elementor-social-icon-telegram{background-color:#2ca5e0}.elementor-social-icon-thumb-tack{background-color:#1aa1d8}.elementor-social-icon-tripadvisor{background-color:#589442}.elementor-social-icon-tumblr{background-color:#35465c}.elementor-social-icon-twitch{background-color:#6441a5}.elementor-social-icon-twitter{background-color:#1da1f2}.elementor-social-icon-viber{background-color:#665cac}.elementor-social-icon-vimeo{background-color:#1ab7ea}.elementor-social-icon-vk{background-color:#45668e}.elementor-social-icon-weibo{background-color:#dd2430}.elementor-social-icon-weixin{background-color:#31a918}.elementor-social-icon-whatsapp{background-color:#25d366}.elementor-social-icon-wordpress{background-color:#21759b}.elementor-social-icon-xing{background-color:#026466}.elementor-social-icon-yelp{background-color:#af0606}.elementor-social-icon-youtube{background-color:#cd201f}.elementor-social-icon-500px{background-color:#0099e5}.elementor-shape-rounded .elementor-icon.elementor-social-icon{border-radius:10%}.elementor-shape-circle .elementor-icon.elementor-social-icon{border-radius:50%}</style>		<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-1a6c18d" href="https://www.facebook.com/comexfarm" target="_blank">
+						<span class="elementor-screen-only">Facebook-f</span>
+						<svg class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-3bf90e6" href="https://www.instagram.com/comexfarm/" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<svg class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-5abaa7f" href="https://www.linkedin.com/company/comex-farm-co-ltd/" target="_blank">
+						<span class="elementor-screen-only">Linkedin</span>
+						<svg class="e-font-icon-svg e-fab-linkedin" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>					</a>
+				</span>
+					</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-22972662" data-id="22972662" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-4694e42 elementor-widget elementor-widget-heading" data-id="4694e42" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Quick Links</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2192763a elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="2192763a" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">		<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="index.html">
+
+											<span class="elementor-icon-list-text">Home</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://comexfarm.com/about-us/">
+
+											<span class="elementor-icon-list-text">About</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://comexfarm.com/services/">
+
+											<span class="elementor-icon-list-text">Services</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://comexfarm.com/gallery/">
+
+											<span class="elementor-icon-list-text">Gallery</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://comexfarm.com/contact-us/">
+
+											<span class="elementor-icon-list-text">Contact Us</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-65ceb40e" data-id="65ceb40e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-6fc934eb elementor-widget elementor-widget-heading" data-id="6fc934eb" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Oppening Hours</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-21895def elementor-list-item-link-inline elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="21895def" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">24/7</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-7b508022" data-id="7b508022" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-58dfc7fb elementor-widget elementor-widget-heading" data-id="58dfc7fb" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Get In Touch</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3c89b075 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="3c89b075" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Email: info@comexfarm.com</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Phone: +84 912 438 547</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+		<div class="elementor-element elementor-element-2c1fb7c e-flex e-con-boxed e-con" data-id="2c1fb7c" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-b1dab88 elementor-widget elementor-widget-site-logo" data-id="b1dab88" data-element_type="widget" data-settings="{&quot;width&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:4,&quot;sizes&quot;:[]},&quot;space&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:21,&quot;sizes&quot;:[]},&quot;align&quot;:&quot;center&quot;,&quot;width_tablet&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;width_mobile&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space_tablet&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space_mobile&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_border_radius&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;image_border_radius_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;image_border_radius_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;caption_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;caption_padding_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;caption_padding_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;caption_space&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;caption_space_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;caption_space_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="site-logo.default">
+				<div class="elementor-widget-container">
+					<div class="hfe-site-logo">
+													<a data-elementor-open-lightbox=""  class='elementor-clickable' href="index.html">
+							<div class="hfe-site-logo-set">
+				<div class="hfe-site-logo-container">
+					<img decoding="async" class="hfe-site-logo-img elementor-animation- jetpack-lazy-image" src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=512%2C512&#038;ssl=1" alt data-lazy-src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=512%2C512&amp;is-pending-load=1#038;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-lazy-fallback="1" decoding="async" class="hfe-site-logo-img elementor-animation-"  src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=512%2C512&#038;ssl=1" alt="" /></noscript>
+				</div>
+			</div>
+							</a>
+						</div>
+					</div>
+				</div>
+					</div>
+				</div>
+							</div>
+				<div class="post-tags">
+					</div>
+			</div>
+
+
+</main>
+
+	<footer id="site-footer" class="site-footer dynamic-footer footer-stacked footer-has-copyright" role="contentinfo">
+	<div class="footer-inner">
+		<div class="site-branding show-logo">
+							<div class="site-logo hide">
+					<a href="index.html" class="custom-logo-link" rel="home" aria-current="page"><img width="512" height="512" src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=512%2C512&amp;ssl=1" class="custom-logo jetpack-lazy-image" alt="Comex Farm" decoding="async" data-lazy-srcset="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?w=512&amp;ssl=1 512w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=270%2C270&amp;ssl=1 270w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=192%2C192&amp;ssl=1 192w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=180%2C180&amp;ssl=1 180w, https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?resize=32%2C32&amp;ssl=1 32w" data-lazy-sizes="(max-width: 512px) 100vw, 512px" data-lazy-src="https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=512%2C512&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></a>				</div>
+							<p class="site-description hide">
+					Agricultural Exports from Vietnam				</p>
+					</div>
+
+					<nav class="site-navigation hide">
+				<div class="menu-menu-1-container"><ul id="menu-menu-2" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-53 current_page_item menu-item-72"><a href="index.html" aria-current="page">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="https://comexfarm.com/services/">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="https://comexfarm.com/about-us/">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="https://comexfarm.com/gallery/">Gallery</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="https://comexfarm.com/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="tel:%+84%20912%20438%20547">Get a free quote  +84 912 438 547</a></li>
+</ul></div>			</nav>
+
+					<div class="copyright show">
+				<p>© 2023 Comex Farm CO., LTD
+</p>
+			</div>
+			</div>
+</footer>
+
+
+
+		<noscript><link rel='stylesheet' id='all-css-f364975cde867da046baf7136be23cc1' href='wp-content/plugins/elementor/assets/lib/animations/animations.min.css%3Fm=1693758062.css' type='text/css' media='all' /></noscript><link rel='stylesheet' id='all-css-f364975cde867da046baf7136be23cc1' href='wp-content/plugins/elementor/assets/lib/animations/animations.min.css%3Fm=1693758062.css' type='text/css' media="not all" data-media="all" onload="this.media=this.dataset.media; delete this.dataset.media; this.removeAttribute( 'onload' );" />
+
+
+
+
+
+
+
+
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://comexfarm.com/","url":"https://comexfarm.com/","name":"Home - Comex Farm Vietnam Dragon Fruit Rice & Rice-based Products","isPartOf":{"@id":"https://comexfarm.com/#website"},"about":{"@id":"https://comexfarm.com/#organization"},"primaryImageOfPage":{"@id":"https://comexfarm.com/#primaryimage"},"image":{"@id":"https://comexfarm.com/#primaryimage"},"thumbnailUrl":"https://comexfarm.com/wp-content/uploads/2024/02/1705899422198-768x1024.jpeg","datePublished":"2023-09-03T16:37:06+00:00","dateModified":"2024-08-11T03:46:49+00:00","description":"Comex Farm: Elevating Agricultural Exports from Vietnam for Over a Decade. Discover Our Exquisite Range of Premium Agricultural Products includes Dragon Fruit, Rice & Rice-based Products, Coconut, Longan, Fresh Fruits, Dried Fruits, and Spices, Crafted with Care from Vietnam's Lush Fields. Embrace Quality, Reliability, and Sustainability with Comex Farm's Natural Bounty. 🌿🌾🍅","breadcrumb":{"@id":"https://comexfarm.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://comexfarm.com/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://comexfarm.com/#primaryimage","url":"https://comexfarm.com/wp-content/uploads/2024/02/1705899422198-768x1024.jpeg","contentUrl":"https://comexfarm.com/wp-content/uploads/2024/02/1705899422198-768x1024.jpeg"},{"@type":"BreadcrumbList","@id":"https://comexfarm.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://comexfarm.com/#website","url":"https://comexfarm.com/","name":"Comex Farm","description":"Agricultural Exports from Vietnam","publisher":{"@id":"https://comexfarm.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://comexfarm.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://comexfarm.com/#organization","name":"COMEX FARM CO., LTD","alternateName":"Comex Farm","url":"https://comexfarm.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://comexfarm.com/#/schema/logo/image/","url":"https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=512%2C512&ssl=1","contentUrl":"https://i0.wp.com/comexfarm.com/wp-content/uploads/2023/09/cropped-default_logo.jpeg?fit=512%2C512&ssl=1","width":512,"height":512,"caption":"COMEX FARM CO., LTD"},"image":{"@id":"https://comexfarm.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/comexfarm","https://www.instagram.com/comexfarm/","https://www.linkedin.com/company/comex-farm-co-ltd/"]}]}</script><script type='text/javascript' src='wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js%3Fm=1693758062'></script><script src='wp-includes/js/jquery/jquery.min.js%3Fver=3.6.1' id='jquery-core-js'></script><script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js%3Fm=1605690366'></script><script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script><script type='text/javascript'>
+				const lazyloadRunObserver = () => {
+					const dataAttribute = 'data-e-bg-lazyload';
+					const lazyloadBackgrounds = document.querySelectorAll( `[${ dataAttribute }]:not(.lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+					entries.forEach( ( entry ) => {
+						if ( entry.isIntersecting ) {
+							let lazyloadBackground = entry.target;
+							const lazyloadSelector = lazyloadBackground.getAttribute( dataAttribute );
+							if ( lazyloadSelector ) {
+								lazyloadBackground = entry.target.querySelector( lazyloadSelector );
+							}
+							if( lazyloadBackground ) {
+								lazyloadBackground.classList.add( 'lazyloaded' );
+							}
+							lazyloadBackgroundObserver.unobserve( entry.target );
+						}
+					});
+					}, { rootMargin: '100px 0px 100px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script><script>window.addEventListener( 'load', function() {
+				document.querySelectorAll( 'link' ).forEach( function( e ) {'not all' === e.media && e.dataset.media && ( e.media = e.dataset.media, delete e.dataset.media );} );
+				var e = document.getElementById( 'jetpack-boost-critical-css' );
+				e && ( e.media = 'not all' );
+			} );</script><script id='jetpack-lazy-images-js-extra'>
+var jetpackLazyImagesL10n = {"loading_warning":"Images are still loading. Please cancel your print and try again."};
+</script><script type='text/javascript' src='_jb_static/index.html%3F%3F-eJy1jssOgjAQRf%252FGlaUSAtGF8VNMaUcoth3SGTD69dYHhOjGjcs7c+fMkZdeaAwMgWXvhsYGkh1wr%252FRZ1IjEUzqOEAxGqQZGr5itnnvWqwaENkEamw7mmHW0lgs+t+CBZAvOoQCXQuAHkQg4fZ02p%252Fjsm8zbL8SH4g9yTt2uL0N66yVSJNBsMQisCeII8Q9%252FFoNEP%252Fh9Xu2K7aYoq3Kl6'></script><script defer src='https://stats.wp.com/e-202401.js' id='jetpack-stats-js'></script><script id='jetpack-stats-js-after'>
+_stq = window._stq || [];
+_stq.push([ "view", {v:'ext',blog:'223090123',post:'53',tz:'7',srv:'comexfarm.com',j:'1:12.5'} ]);
+_stq.push([ "clickTrackerInit", "223090123", "53" ]);
+</script><script type='text/javascript' src='_jb_static/index.html%3F%3F-eJyVjksOwjAQQ2%252FDimYoiAKLirPkM6ApySRkEkW9PVUlEEvY2ZKfbWips5ELcoHk651YAD2GxccMWgSLwCTQ0CRtHypXLhRQBWI1yRZ+xG95DbkuRFc9yl+8JwNNzykSL+6jvjuIra8O163pWTHPUAlszO+n1zD2w+VwOp53w35jzdi%252FAApfXVA='></script><script id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.15.3","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"container_grid":true,"hello-theme-header-footer":true,"editor_v2":true,"landing-pages":true,"nested-elements":true,"e_lazyload":true,"e_global_styleguide":true},"urls":{"assets":"https:\/\/comexfarm.com\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal"},"post":{"id":53,"title":"Home%20-%20Comex%20Farm%20Vietnam%20Dragon%20Fruit%20Rice%20%26%20Rice-based%20Products","excerpt":"","featuredImage":false}};
+</script><script src='wp-content/plugins/elementor/assets/js/frontend.min.js%3Fver=3.15.3' id='elementor-frontend-js'></script></body>
 </html>
